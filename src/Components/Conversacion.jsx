@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Mensaje from './Mensaje'
 import './Conversacion.css'
 import { Link, useParams } from 'react-router-dom'
@@ -13,7 +13,22 @@ const Conversacion = () => {
     const [dataHistory, setDataHistory] = useState(contacto ? contacto.mensajes : [])
     console.log(dataHistory)
     
+    // Cargar mensajes desde localStorage al iniciar
+    useEffect(() => {
+        const mensajesLocalStorage = localStorage.getItem(`mensajes_${id}`);
+        if (mensajesLocalStorage) {
+            setDataHistory(JSON.parse(mensajesLocalStorage));
+        } else if (contacto) {
+            setDataHistory(contacto.mensajes);
+        }
+    }, [id, contacto]);
     
+    // Guardar mensajes en localStorage cada vez que se actualicen
+    useEffect(() => {
+        localStorage.setItem(`mensajes_${id}`, JSON.stringify(dataHistory));
+    }, [dataHistory, id]);
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
     const nuevoMensaje = {
