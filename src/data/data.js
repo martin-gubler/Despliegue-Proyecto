@@ -37,7 +37,7 @@ const data = [
     id: 4,
     nombre_contacto: 'Paulo Dybala',
     thumbnail: '/imagenes/Dybala.jpg',
-    ultima_conexion: 'hoy',
+    ultima_conexion: 'lunes 4:20',
     mensajes: [
         { author: 'yo', content: '¡Hola Paulo! ¿Preparado para el juego?', fecha: '2024-07-18', estado: 'visto', id: '1' },
         { author: 'Paulo Dybala', content: 'Sí, vamos con todo.', fecha: '2024-07-18', estado: 'visto', id: '2' },

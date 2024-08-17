@@ -60,6 +60,7 @@ const Conversacion = () => {
                 </div>
                 <div className='contacto'>
                     <h3 className='nombre_contacto'><Link className='link' to={'/InfoContacto/' + contacto.id}>{contacto.nombre_contacto}</Link></h3>
+                    <span>{contacto.ultima_conexion}</span>
                 </div>
                 <div className='botones'>
                     <div className='btn-div-top'>
