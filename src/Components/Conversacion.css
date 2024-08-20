@@ -1,6 +1,7 @@
 
 
-.info-contacto { 
+.info-contacto {
+    padding: 10px;
     color: white;
     max-height: 105px;
     background-color: #202C33;
@@ -32,9 +33,10 @@
 }
 
 .contacto {
+    flex: auto;
     padding: 20px;
     font-size: 90%;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -45,6 +47,7 @@
 }
 
 .div_volver{
+    flex: auto;
     width: 50px;
     align-items: center;
     display: flex;
@@ -101,6 +104,7 @@
 }
 
 .escribir-mensaje {
+    gap: 10px;
     display: flex;
     width: 100%;
     height: 60px;
@@ -142,19 +146,18 @@
 
 .btn-div-bottom-1{
     display: flex;
-    width: 10%;
+    width: 5%;
     margin-left: 10px;
 }
 .btn-div-bottom-2{
     display: flex;
-    width: 10%;
+    width: 5%;
 }
 .btn-div-bottom-3{
     display: flex;
-    width: 10%;
-    margin-right: 10px;
+    width: 5%;
+    margin-right: 15px;
 }
-
 
 .input-div{
     width: 100%;
@@ -172,4 +175,45 @@
     text-decoration: none;
 }
 
+@media (width <= 500px){
+    .imagen-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    
+} 
 
+@media (width >= 500px){
+    .div_volver{
+        flex: none;
+    }
+    .escribir-mensaje{
+        gap: 0;
+    }
+    .btn-div-bottom-3{
+        margin-right: 5px;
+    }
+}
+
+@media (width >= 1500px){
+    .btn-div-bottom-1, .btn-div-bottom-2, .btn-div-bottom-3{
+    display: flex;
+    width: 50px;
+    font-size: 25px;
+    }
+    .botones {
+        gap: 40px;
+        font-size: 25px;
+        align-items: center;
+        display: flex;
+    }
+    .contacto{
+        font-size: 20px;
+    }
+}

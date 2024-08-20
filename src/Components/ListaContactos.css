@@ -13,6 +13,7 @@
     background-color: black;
     border-end-end-radius: 10px;
     width: 100vw;
+    height: 100vh;
     overflow: auto;
 }
 
@@ -68,4 +69,21 @@
 .ultima-conexion {
     font-size: 0.9em;
     color: grey;
+}
+
+
+@media (width <= 500px ){
+    .div-foto{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (width >= 1000px ){
+    .contacto-container{
+        margin-left: 20px;
+    }
+    .chats{
+        margin-left: 25px;
+    }
 }

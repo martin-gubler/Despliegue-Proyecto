@@ -13,7 +13,6 @@ const Conversacion = () => {
     const [dataHistory, setDataHistory] = useState(contacto ? contacto.mensajes : [])
     console.log(dataHistory)
     
-    // Cargar mensajes desde localStorage al iniciar
     useEffect(() => {
         const mensajesLocalStorage = localStorage.getItem(`mensajes_${id}`);
         if (mensajesLocalStorage) {
@@ -23,7 +22,6 @@ const Conversacion = () => {
         }
     }, [id, contacto]);
     
-    // Guardar mensajes en localStorage cada vez que se actualicen
     useEffect(() => {
         localStorage.setItem(`mensajes_${id}`, JSON.stringify(dataHistory));
     }, [dataHistory, id]);

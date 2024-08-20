@@ -8,7 +8,7 @@ const ListaContactos = () => {
 return (
     <div className='lista-contactos-container'>
         <div className='div-chats'>
-            <h1>Chats</h1>
+            <h1 className='chats'>Chats</h1>
         </div>
     <div className='contactos-container'>
         
@@ -25,7 +25,6 @@ return (
             </div>)})}
             
     </div>
-
     </div>
 )
 }

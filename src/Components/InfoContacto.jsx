@@ -37,12 +37,30 @@ const InfoContacto = () => {
         </div>
       </div>
         <div className='div-funciones'>
-          <h3>Archivos multimedia</h3>
-          <h3>Mensajes destacados</h3>
-          <h3>Notificaciones</h3>
-          <h3>Fondo</h3>
-          <h3>Guardar en Fotos</h3>
-          <h3>Mensajes temporales</h3>
+          <div className='funciones'>
+            <i class="bi bi-images"></i>
+            <h3>Archivos multimedia</h3>
+          </div>
+          <div className='funciones'>
+            <i class="bi bi-star-fill"></i>
+            <h3>Mensajes destacados</h3>
+          </div>
+          <div className='funciones'>
+            <i class="bi bi-bell"></i>
+            <h3>Notificaciones</h3>
+          </div>
+          <div className='funciones'>
+            <i class="bi bi-image"></i>
+            <h3>Fondo</h3>
+          </div>
+          <div className='funciones'>
+            <i class="bi bi-download"></i>
+            <h3>Guardar en Fotos</h3>
+          </div>
+          <div className='funciones'>
+            <i class="bi bi-clock-history"></i>
+            <h3>Mensajes temporales</h3>
+          </div>
         </div>
     </div>
   )
