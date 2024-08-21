@@ -7,11 +7,9 @@ const Conversacion = () => {
 
     const { id } = useParams()
     const contacto = data.find(contacto => contacto.id === parseInt(id))
-    console.log(id)
 
     const [mensaje, setMensaje] = useState('')
     const [dataHistory, setDataHistory] = useState(contacto ? contacto.mensajes : [])
-    console.log(dataHistory)
     
     useEffect(() => {
         const mensajesLocalStorage = localStorage.getItem(`mensajes_${id}`);
